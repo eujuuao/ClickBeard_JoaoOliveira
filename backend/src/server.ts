@@ -2,6 +2,8 @@ import express from 'express';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.routes';
 import barberRoutes from './routes/barber.routes';
+import specialtyRoutes from './routes/specialty.routes';
+import barberSpecialtyRoutes from './routes/barberSpecialty.routes';
 
 
 dotenv.config();
@@ -10,6 +12,8 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/barbers', barberRoutes);
+app.use('/specialties', specialtyRoutes);
+app.use('/barbers/:barberId/specialties', barberSpecialtyRoutes);
 
 app.get('/', (req, res) => { res.send('Bem-vindo à API ClickBeard!');});
 
