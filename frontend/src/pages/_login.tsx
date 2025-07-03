@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { api } from '../services/api'
-import Layout from '../components/layout'
 
-export default function Login() {
+export default function login() {
   const [email, setEmail] = useState(''), [pw, setPw] = useState('')
   const nav = useNavigate()
 

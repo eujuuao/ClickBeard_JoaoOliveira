@@ -3,7 +3,7 @@ import { api } from '../services/api'
 
 type Appointment = { id: number; barber: string; specialty: string; time: string }
 
-export default function Dashboard() {
+export default function dashboard() {
   const [apps, setApps] = useState<Appointment[]>([])
   useEffect(()=> {
     api.get('/appointments').then(r=>setApps(r.data))
