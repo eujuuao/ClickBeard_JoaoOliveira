@@ -1,73 +1,148 @@
-# Welcome to your Lovable project
 
-## Project info
+# 💈 ClickBeard
 
-**URL**: https://lovable.dev/projects/b8fa5747-6072-423d-9104-5a5231c29495
+Sistema completo de agendamento para barbearias, desenvolvido como teste técnico fullstack.
 
-## How can I edit this code?
+## 🧩 Tecnologias
 
-There are several ways of editing your application.
+### Backend
+- Node.js + Express
+- TypeScript
+- Prisma ORM
+- MySQL
+- JWT + Bcrypt
+- MSC Pattern (Model-Service-Controller)
 
-**Use Lovable**
+### Frontend
+- React + Vite
+- TypeScript
+- TailwindCSS
+- Axios
+- React Router DOM
+- Projeto UI com auxilio de IA 
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b8fa5747-6072-423d-9104-5a5231c29495) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📁 Estrutura de Pastas
 
-**Use your preferred IDE**
+```
+ClickBeard_JoaoOliveira/
+├── backend/
+│   ├── prisma/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── models/
+│   │   ├── services/
+│   │   ├── routes/
+│   │   ├── middlewares/
+│   │   └── server.ts
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── routes/
+│   │   └── App.tsx
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🚀 Como Rodar o Projeto
 
-Follow these steps:
+### Pré-requisitos
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- Node.js v18+
+- MySQL
+- npm ou yarn
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 📦 Backend
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+cd backend
+npm install
+npx prisma migrate dev
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+> Por padrão, a API roda em `http://localhost:3000`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+### 💻 Frontend
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## What technologies are used for this project?
+> A interface estará disponível em `http://localhost:5173`
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🔐 Usuários Demo
 
-## How can I deploy this project?
+Para facilitar os testes:
 
-Simply open [Lovable](https://lovable.dev/projects/b8fa5747-6072-423d-9104-5a5231c29495) and click on Share -> Publish.
+```json
+Admin:
+  Email: admin@clickbeard.com
+  Senha: password
 
-## Can I connect a custom domain to my Lovable project?
+Cliente:
+  Email: client@example.com
+  Senha: password
+```
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📌 Funcionalidades
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Autenticação
+- Cadastro e login de usuários
+- Controle por JWT (token no localStorage)
+
+### Admin
+- Gerenciar barbeiros
+- Gerenciar especialidades
+- Visualizar agendamentos
+
+### Cliente
+- Ver barbeiros e serviços
+- Agendar horários disponíveis
+- Cancelar agendamentos
+
+---
+
+## 🧠 Estrutura MSC
+
+O backend segue a arquitetura MSC (Model-Service-Controller):
+
+- **Model:** Prisma (e opcionalmente modelos manuais para coesão)
+- **Service:** Regras de negócio
+- **Controller:** Lida com `req` e `res`
+
+---
+
+## 🛠️ Scripts Úteis
+
+```bash
+# Backend
+npm run dev             # inicia servidor
+npx prisma studio       # visualiza DB
+npx prisma migrate dev  # aplica migrações
+
+# Frontend
+npm run dev             # inicia interface
+```
+
+---
+
+
+## 👨‍💻 Autor
+
+🔗 www.linkedin.com/in/joão-victor-oliveira-2440231ab
+📧  joaovictorgoncalvsoliveira450@gmail.com
+📱 (27) 99604-3451
